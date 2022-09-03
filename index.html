@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Build A Drum Machine</title>
+
+  <script>
+    function play(str) {
+      
+      if (str === "q" || str === "Q") {
+        document.getElementById('display').innerHTML = "Saturn";
+      } else if (str === "w" || str === "W") {
+        document.getElementById('display').innerHTML = "Mary on a cross";
+      } else if (str === "e" || str === "E") {
+        document.getElementById('display').innerHTML = "Time";
+      } else if (str === "a" || str === "A") {
+        document.getElementById('display').innerHTML = "Hearing";
+      } else if (str === "s" || str === "S") {
+        document.getElementById('display').innerHTML = "S.O.S";
+      } else if (str === "d" || str === "D") {
+        document.getElementById('display').innerHTML = "Can I call you back?";
+      } else if (str === "z" || str === "Z") {
+        document.getElementById('display').innerHTML = "On brulera";
+      } else if (str === "x" || str === "X") {
+        document.getElementById('display').innerHTML = "Lose you too";
+      } else if (str === "c" || str === "C") {
+        document.getElementById('display').innerHTML = "Kissing other people";
+      } 
+      var audio = document.getElementById(str);
+      audio.play();
+    }
+
+    window.document.onkeyup = function(event) {
+      let str = event.key
+      if (str === "q" || str === "Q") {
+        play ("Q");
+      } else if (str === "w" || str === "W") {
+        play ("W");
+      } else if (str === "e" || str === "E") {
+        play ("E");
+      } else if (str === "a" || str === "A") {
+        play ("A");
+      } else if (str === "s" || str === "S") {
+        play ("S");
+      } else if (str === "d" || str === "D") {
+        play ("D");
+      } else if (str === "z" || str === "Z") {
+        play ("Z");
+      } else if (str === "x" || str === "X") {
+        play ("X");
+      } else if (str === "c" || str === "C") {
+        play ("C");
+      } 
+    }
+  
+  </script>
+  </head>
+  <body>
+
+    <div class="conatiner" id="drum-machine">
+      <h1 class="text-center">This is A Drum Machine!</h1>
+      <div class="card my-3">
+        <div class="card-body">
+      <div class="text-center" id="display">There's nothing here to display!</div>
+    </div>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-0" onclick="play('Q')">
+        Q 
+    <audio src="./audio/sleeping_at_last_saturn_official_music_video_aac_64697.m4a" class="clip" id="Q">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-1" onclick="play('W')">
+        W
+        <audio src="./audio/ghost_mary_on_a_cross_aac_66214.m4a" class="clip" id="W">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-2" onclick="play('E')" >
+        E
+        <audio src="./audio/hans_zimmer_time_official_audio_aac_66264.m4a" class="clip" id="E">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-3" onclick="play('A')">
+        A
+        <audio src="./audio/hearing_sleeping_at_last_aac_66292.m4a" class="clip" id="A">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-4" onclick="play('S')">
+        S
+        <audio src="./audio/sos_indila_lyrics_aac_66245.m4a" class="clip" id="S">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-5" onclick="play('D')">
+        D
+        <audio src="./audio/shy_martin_can_i_call_you_back__official_lyric_video_aac_30994.m4a" class="clip" id="D">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-6" onclick="play('Z')">
+        Z
+        <audio src="./audio/pomme_on_brulera_aac_30962.m4a" class="clip" id="Z">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-7" onclick="play('X')">
+        X
+        <audio src="./audio/shy_martin_lose_you_too_lyrics_aac_31018.m4a" class="clip" id="X">
+    </button>
+      <button class="drum-pad btn btn-block btn-primary" id="drum-8" onclick="play('C')">
+        C
+        <audio src="./audio/lennon_stella_kissing_other_people_lyrics_aac_31236.m4a" class="clip" id="C">
+    </button>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
